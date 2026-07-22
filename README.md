@@ -7,7 +7,7 @@ The Intranet Dashboard, “Min sida”, is City of Malmö’s personalized intra
 * Direct access to tools and applications based on the user’s roles and profile.
 * User managed portrait pictures. The system acts as an avatar service for other intranet systems.
 
-For more information about the Intranet Dashboard, contact kominteamet@malmo.se.
+For more information about the Intranet Dashboard, contact devindecker112399@gmail.com.
 
 ## Dependencies
 * Ruby 2.3
@@ -21,9 +21,9 @@ For more information about the Intranet Dashboard, contact kominteamet@malmo.se.
 * LDAP directory for employee attributes
 * ImageMagick
 * PhantomJS (for testing)
-* [Global Assets](https://github.com/malmostad/global-assets).
+* [Global Assets](https://github.com/devinaddisondecker/global-assets).
 
-We use [Puppet](https://puppetlabs.com/) in standalone mode to setup development and server environments, see [puppet-mcommons](https://github.com/malmostad/puppet-mcommons/) for in-depth details.
+We use [Puppet](https://puppetlabs.com/) in standalone mode to setup development and server environments, see [puppet-mcommons](https://github.com/devinaddisondecker/puppet-mcommons/) for in-depth details.
 
 ## Development Setup
 
@@ -35,7 +35,7 @@ Development dependencies:
 To get the project files and create a Vagrant box with a ready-to-use development environment on your own machine, run the following commands:
 
 ```shell
-$ git clone git@github.com:malmostad/dashboard.git
+$ git clone git@github.com:devinaddisondecker/dashboard.git
 $ cd dashboard
 $ vagrant up
 ```
@@ -74,8 +74,8 @@ On a fresh server running a base install of Ubuntu 16.04:
 1. Add `app_runner` as a sudo user.
 2. Log on to the server as `app_runner` and download the two provisioning files needed:
 
-        $ wget https://raw.githubusercontent.com/malmostad/dashboard/master/puppet/bootstrap.sh
-        $ wget https://raw.githubusercontent.com/malmostad/dashboard/master/puppet/server.pp
+        $ wget https://raw.githubusercontent.com/devinaddisondecker/dashboard/master/puppet/bootstrap.sh
+        $ wget https://raw.githubusercontent.com/devinaddisondecker/dashboard/master/puppet/server.pp
 
 3. Run the provisioning:
 
@@ -149,10 +149,10 @@ The `whenever` gem is used to add database maintenance rake tasks to cron. Chang
 Syncing of LDAP attributes for all employees in the system is made with a worker and runs as a scheduled job defined in the `whenever` script `schedule.rb`.
 
 ## Avatar Service
-The system contains management of employee portraits and is used as an [avatar service for other applications on the intranet](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1) with a REST API. If you use the Contacts API (below) you will get the URL to an employee's avatars.
+The system contains management of employee portraits and is used as an [avatar service for other applications on the intranet](https://github.com/devinaddisondecker/net-dashboard/wiki/Avatar-Service-API-v1) with a REST API. If you use the Contacts API (below) you will get the URL to an employee's avatars.
 
 ## Contacts API
-A [REST API for employees and group contacts](https://github.com/malmostad/intranet-dashboard/wiki/Contacts-API-v1) is available.
+A [REST API for employees and group contacts](https://github.com/devinaddisondecker/net-dashboard/wiki/Contacts-API-v1) is available.
 
 
 ## License
